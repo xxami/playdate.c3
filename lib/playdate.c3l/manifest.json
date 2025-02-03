@@ -1,0 +1,11 @@
+{
+  "provides": "playdate",
+  "targets": {
+    "windows-x64": {
+      "dependencies": [],
+    },
+    "linux-x64": {
+      "dependencies": [],
+    }
+  }
+}

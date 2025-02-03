@@ -1,0 +1,29 @@
+{
+  "langrev": "1",
+  "warnings": [ "no-unused" ],
+  "dependency-search-paths": [ "lib" ],
+  "dependencies": [ "playdate" ],
+  "authors": [ "lilah <lilah.willacott@gmail.com>" ],
+  "version": "0.1.0",
+  "sources": [ "src/**" ],
+  "output": "build",
+  "c-include-dirs": ["$PLAYDATE_SDK_PATH/C_API"],
+
+  "targets": {
+    // Simulator
+    "playdate_windows64": {
+      "target": "windows-x64",
+      "type": "dynamic-lib",
+    },
+    "playdate_linux64": {
+      "target": "linux-x64",
+      "type": "dynamic-lib"
+    },
+    // Real device
+    "playdate_device": {
+      "type": "executable",
+    },
+  },
+  "cpu": "generic",
+  "opt": "O0"
+}
