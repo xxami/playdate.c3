@@ -1,16 +1,8 @@
 
 module playdate;
 
-distinct LCDFont = void;
-
-def LoadFontFn = fn LCDFont*(char* path, char** outErr);
-
-struct PlaydateGraphics {
-	LoadFontFn loadFont; 
-}
-
 struct PlaydateAPI {
-	//struct playdate_sys* system;
+	PlaydateSystem* system;
 	PlaydateGraphics* graphics;
 }
 
@@ -26,4 +18,3 @@ enum PDSystemEvent : int {
 	EVENT_KEY_RELEASED,
 	EVENT_LOW_POWER
 }
-
