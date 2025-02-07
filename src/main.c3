@@ -12,9 +12,10 @@ fn int eventHandler(
 	uint arg) @export("eventHandler") {
 	
 	if (event == PDSystemEvent.EVENT_INIT) {
-		api.system.setUpdateCallback(&update, null);
-		//char* err = null;
-		//font = api.graphics.loadFont(fontpath, &err);
+		api.system.log_to_console("hello from c3");
+		api.system.set_update_callback(&update, null);
+		char* err = null;
+		font = api.graphics.loadFont(fontpath, &err);
 	}
 	return 0;
 }
