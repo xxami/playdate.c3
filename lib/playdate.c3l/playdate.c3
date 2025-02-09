@@ -3,6 +3,7 @@ module playdate;
 
 struct PlaydateAPI {
 	PlaydateSystem* system;
+	PlaydateFile* file;
 	PlaydateGraphics* graphics;
 }
 

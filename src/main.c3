@@ -19,8 +19,9 @@ fn int eventHandler(
 		if (font == null) {
 			api.system.error("Couldn't load font %s:%s", fontpath, err);
 		}
-
-		api.system.set_update_callback(&update, api);
+		else {
+			api.system.set_update_callback(&update, api);
+		}
 	}
 	return 0;
 }
