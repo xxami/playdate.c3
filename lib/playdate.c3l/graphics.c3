@@ -121,7 +121,6 @@ def GetContext = fn LCDBitmap*(LCDVideoPlayer* p);
 struct PlaydateGraphics {
 	PlaydateVideo* video;
 	
-	SetPixel set_pixel;
 	Clear clear;
 	SetBackgroundColor set_background_color;
 	SetStencil set_stencil;
@@ -189,6 +188,8 @@ struct PlaydateGraphics {
 	SetStencilImage set_stencil_image;
 	MakeFontFromData make_font_from_data;
 	GetTextTracking get_text_tracking;
+	
+	SetPixel set_pixel;
 	GetBitmapPixel get_bitmap_pixel;
 	GetBitmapTableInfo get_bitmap_table_info;
 	DrawTextInRect draw_text_in_rect;
@@ -233,7 +234,7 @@ def LoadBitmapTable = fn LCDBitmapTable*(char* path, char** outerr);
 def LoadIntoBitmapTable = fn void(char* path, LCDBitmapTable* table, char** outerr);
 def GetTableBitmap = fn LCDBitmap*(LCDBitmapTable* table, int idx);
 
-def LoadFont = fn LCDFont*(char* path, char** outErr);
+def LoadFont = fn LCDFont*(ZString path, ZString* outErr);
 def GetFontPage = fn LCDBitmap*(LCDFont* font, uint c);
 def GetPageGlyph = fn LCDBitmap*(LCDFontPage* page, uint c, LCDBitmap** bitmap, int* advance);
 def GetGlyphKerning = fn int(LCDFontGlyph* glyph, uint glyphcode, uint nextcode);
