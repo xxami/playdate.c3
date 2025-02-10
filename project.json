@@ -9,19 +9,19 @@
   "output": "build",
 
   "targets": {
-    // Simulator
     "playdate_windows64": {
       "target": "windows-x64",
       "type": "dynamic-lib",
-      "memory-env": "tiny",
     },
     "playdate_linux64": {
       "target": "linux-x64",
       "type": "dynamic-lib"
     },
-    // Real device
     "playdate_device": {
       "type": "executable",
+      "target": "elf-aarch64",
+      "cpu": "cortex-m7",
+      "memory-env": "tiny",
     },
   },
   "cpu": "generic",

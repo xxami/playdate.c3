@@ -6,6 +6,9 @@
     },
     "linux-x64": {
       "dependencies": [],
+    },
+    "elf-aarch64": {
+      "dependencies": [],
     }
   }
 }

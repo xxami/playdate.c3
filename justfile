@@ -23,3 +23,7 @@ build-device:
     @echo "Building for device..."
     @echo "SDK: '{{playdate_sdk}}'"
     c3 build playdate_device
+    mkdir -p build/cart res
+    cp -r res/* build/cart/
+    cp src/pdxinfo build/cart/pdxinfo
+
