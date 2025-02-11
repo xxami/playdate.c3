@@ -6,6 +6,7 @@ struct PlaydateAPI {
 	PlaydateFile* file;
 	PlaydateGraphics* graphics;
 	PlaydateSprite* sprite;
+	PlaydateDisplay* display;
 }
 
 enum PDSystemEvent : int {
